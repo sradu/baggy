@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)https://movado.usablenet.com/pt/switch -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>UsableNet Assistive Switch</title>
+		<script type="text/javascript">
+			function bindEvent(element, eventName, eventHandler) {
+				if (element.addEventListener) {
+					element.addEventListener(eventName, eventHandler, false);
+				} else if (element.attachEvent) {
+					element.attachEvent('on' + eventName, eventHandler);
+				}
+			}
+			var sendMessage = function (msg, origin) {
+				window.parent.postMessage(msg, origin);
+			};
+			bindEvent(window, 'message', function (e) {
+				if(e.data == 'enableUsableNetAssistive') {
+					localStorage.setItem('UsableNetAssistive',1);
+					sendMessage('UsableNetAssistiveEnabled', e.origin);
+				} else if (e.data == 'checkUsableNetAssistive') {
+					if(localStorage.getItem('UsableNetAssistive')){
+						sendMessage('UsableNetAssistiveEnabled', e.origin);
+					}
+				} else if(e.data == 'disableUsableNetAssistive') {
+					localStorage.removeItem('UsableNetAssistive');
+					sendMessage('UsableNetAssistiveDisabled', e.origin);
+				}
+			});
+		</script>
+	</head>
+	<body>
+
+</body></html>

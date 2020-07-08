@@ -1,0 +1,32 @@
+#ada_help_container {position:fixed;top:200px;left:-302px;width:300px;z-index:10000;font-family: 'Arial'; text-align: left; letter-spacing: normal; box-shadow: 1px 2px 4px rgba(0, 0, 0, .2);}
+#ada_help_container small { font-size: calc(0.8 * 16px); }
+#ada_help_open {position:absolute;right:-45px;top:-20px;height:56px;width:56px;cursor:pointer;}
+#ada_help_open img { cursor: pointer; width:56px; height:56px; }
+
+#ada_header {background-color: #003c68; height:50px;}
+#ada_header div {float:left;margin:15px 0px 0 18px;color:#fff;font-weight:bold;font-size:16px;}
+#ada_header a {float:right;margin:12px 18px 0 0;}
+
+#ada_menu {background-color: #fff; border:1px solid #ccc; }
+#ada_menu ul { list-style: none; margin: 0 auto; padding: 0px; width: 300px; }
+#ada_menu ul li { margin:10px 0 10px 18px;  }
+#ada_menu ul li a { display: block; width: 260px; padding:10px 0; text-align: center;border:1px solid #ccc;color:#000;text-transform: uppercase;font-size:14px;line-height: 40px;font-weight: bold;}
+#ada_menu ul li a:hover, #ada_menu ul li a.ada_selected { border:1px solid #003c68;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIHSURBVEhL5VW7SgNBFA0Iye6qiIgP8AGChaX4RNDMZo2dbXols6sYzYdoqRFr/0AMdmKnlmJrF7XQykZQU+i5k0myszubZFs9cNhk7j1n5u7cmU38HxhZb8K03aLBeNmw+QOez+JpuxdifHVzXKbGh8V2R2B4atq8CrOfaPIq8krdTn5YSjuD6eQXDea+6E31pApN5s1Li9aAYMlk/CNo0hFJl3YXpJUeVHLcCoLEXj11r+8MScswanugF8ch7ZG0VEFd0n6TtXwED9Qx/o1XNyatm0CwqCa2J72a1CqfrOn5oRJnfF8Y+4ESy0pSG2KCtyTzpkmbYvkp6F+VOOPnwtgPDN77k1oRue8W4zNCh9dMFWly7oWxHwhUgok18jOY3Db+o02NtLdMGjqwGKM9CWgEK8LYD10lGCsncrmu/qzXh8luMMFnyvbWKL93rTBA10tQU6e2EqyW7iI1GatOZbhDcZrIyHjpxm/G70L5PiIe3hME9N3lm0hgw7Mwfh3KC5K5e1LRBMzGIs9JfaJcLolXdKnNUYhz4myPSmsVMDjRi0C6l5h7pY0FCJ8jaRkG3Tm6doxD0vesbA1KSz3omher1hi0JXRWhs9Jq9ag7wK641lrFEGqwHLcWWnRGahkTFSKbIY6mfuFz8MxnRspjQ/RdWhH6nt5+Cr0pP9YQCGyi/4gEolfzgQrV77CH/wAAAAASUVORK5CYII=) #ecfbff no-repeat 15px center; transition: none; }
+#ada_menu p { margin-left: 18px; margin-bottom: 10px }
+#ada_menu p a { color: #66b1e6; font-size: 14px; }
+#ada_menu p a:hover { text-decoration: underline }
+
+#ada_footer { color: #333; background-color: #fff; border-width: 0px 1px 1px; border-style: solid; border-color: #ccc; }
+#ada_footer > * { margin-left: 18px; padding: 10px 0px; }
+#ada_footer a { color: #333; display: inline-block; font-weight: normal; letter-spacing: normal; position: relative; text-decoration: underline !important; }
+#ada_footer a:hover { color: #ccc; }
+
+a#ada_option_comm { font-size: 8pt; }
+a#ada_option_off { font-size: 8pt; }
+
+#ada_overlay {visibility:visible;position:absolute;left:0px;top:0px;width:100%;height:100%;z-index:200000;background-color:#000}
+#ada_overlay div {max-width:800px;width:auto;margin:100px auto;background-color: #fff;border:1px solid #000;color:#000;padding:15px;font-family: 'Arial';font-weight: normal; font-size: 11pt}
+
+#ada_keyboard_nav { width: 100%; height: 23pt; background-color: #fff; font-size: 11pt; text-align: center; border-bottom: 3px solid #000; display: block; padding: 4px; position: fixed; top:0; z-index: 10000 }
+#ada_keyboard_nav p { margin: 0; padding: 0; font-family: 'Verdana';}
+#ada_keyboard_nav a { color: #0000ee; text-decoration: #0000ee; margin-right: 10px; padding: 3px; letter-spacing: normal }

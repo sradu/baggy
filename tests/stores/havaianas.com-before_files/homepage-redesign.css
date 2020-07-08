@@ -1,0 +1,161 @@
+/*Header*/
+.header-bar {
+    padding: 0;
+}
+
+.header-bar > .shell {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+.header-bar .logo {
+    left: 0;
+    margin: 0;
+    top: -5px;
+}
+
+.header-bar nav.nav {
+    margin-left: 120px;
+}
+
+.header-bar nav.nav.nav-beta.expanded {
+    margin-left: 0;
+}
+
+.widget-wrapper .main-body > .shell {
+    max-width: 1400px;
+    padding: 0 26px;
+}
+
+.widget-wrapper ~ .footer {
+    margin-top: 100px;
+}
+
+.section-widget {
+    margin: 40px 0 0;
+}
+
+.section-secondary {
+    margin-top: 40px;
+}
+
+.section-widget img {
+    width: 100%;
+}
+
+.section .section-head {
+    margin-bottom: 30px;
+}
+
+.section-widget.full-width-widget {
+    margin: 40px 0 40px;
+}
+
+.section-widget .full-width-container {
+
+}
+.section-widget .quad-container {
+    column-count: 2;
+    column-gap: 40px;
+    padding: 0;
+}
+
+.section-widget .quad-container.small {
+    margin-top: 40px;
+}
+
+.section-widget .quad-container .quad-content img {
+    max-width: 654px;
+    max-height: 654px;
+    object-fit: cover;
+}
+
+.section-widget .quad-container.small .quad-content img {
+    max-height: 330px;
+}
+
+.section-widget .mobile {
+    display: none;
+}
+
+.section-widget .desktop {
+    display: block;
+}
+
+.section-widget .square-container {
+   	column-count: 4;
+    column-gap: 29px;
+}
+
+.section-widget.square-widget img {
+    width: auto;
+}
+
+@media (max-width: 1400px) {
+
+    .header-bar .logo {
+        left: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+
+	.section-secondary {
+	    margin-top: 0px;
+	}
+
+    .section .section-body {
+        padding-top: 0;
+    }
+
+    .section-widget.full-width-widget {
+        margin: 0 0 10px;
+        padding: 0;
+    }
+
+    .section-widget {
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    .section .section-head {
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    .section-widget .quad-container.small {
+        margin-top: 0;
+    }
+
+    .section-widget .quad-container {
+        column-count: 1;
+    }
+
+    .section-widget .square-container {
+        column-count: 2;
+        column-gap: 10px;
+    }
+
+    .section-widget .quad-container .quad-content,
+    .section-widget .square-container .square-content {
+        margin-bottom: 10px;
+    }
+
+    .section-widget .mobile {
+        display: block;
+    }
+
+    .section-widget .desktop {
+        display: none;
+    }
+
+    .widget-wrapper .main-body > .shell {
+        padding: 10px 0 0;
+    }
+    
+    .widget-wrapper ~ .footer {
+	    margin-top: 40px;
+	}
+	
+	#logged-out { visibility: hidden; }
+}

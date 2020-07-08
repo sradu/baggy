@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- saved from url=(0117)https://eu2-live.inside-graph.com/bridge.html?target=https%3A%2F%2Fus.oliviaburton.com&cluster=eu2&account=IN-1000725 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+    var getUrlParam = function(name) {
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        if (results == null) {
+            return null;
+        }
+        else {
+            return decodeURIComponent(results[1]) || 0;
+        }
+    };
+    var targetOrigin = getUrlParam("target");
+    var cluster = getUrlParam("cluster");
+    var account = getUrlParam("account");
+    var host = location.protocol + "//" + location.host;
+    var _insideGraph = {
+        setTracker: setTracker
+    };
+
+    var idKey = "inside:" + cluster + ":" + account;
+
+    function loadJS(src) {
+        var s = document.createElement("script");
+        s.type = "text/javascript";
+        s.src = src;
+        s.async = true;
+        var head = document.getElementsByTagName("head")[0];
+        if (head) {
+            head.appendChild(s);
+        } else {
+            document.body.appendChild(s);
+        }
+    }
+
+    function getPID() {
+        var pid = null;
+        try {
+            if (localStorage) {
+                pid = localStorage.getItem(idKey);
+            }
+        } catch (ex) { }
+        if (!pid)
+            pid = getCookie(idKey);
+        return pid;
+    }
+
+    function getTracker(data) {
+        var pid = getPID();
+        data.pid = pid || data.pid;
+        loadJS(host + "/gettracker?acc=" + data.acc + "&pid=" + data.pid + "&c1=" + data.c1 + "&dev=" + data.dev + "&url=" + encodeURIComponent(data.url) + "&sid=" + data.sid);
+    }
+
+    function setTracker(data) {
+        if (data == null)
+            return;
+
+        setCookie(idKey, data.pid, 1000, "/", location.host);
+        try {
+            if (localStorage) {
+                localStorage.setItem(idKey, data.pid);
+            }
+        } catch (ex) { }
+
+        sendEvent("setTracker", data);
+    }
+
+    function sendEvent(name, data) {
+        sendMessage("Inside.Event", name, data);
+    }
+
+    function sendMessage(type, name, data) {
+        window.parent.postMessage(JSON.stringify({ type: type, sender: "Inside.Bridge", name: name, data: data }), targetOrigin);
+    }
+
+    function receiveMessage(data) {
+        if (data.type === "Inside.Event") {
+            triggerEvent(data.name, data.data);
+        }
+    }
+
+    function triggerEvent(name, data) {
+        if (name === "getTracker") {
+            getTracker(data);
+        } else if (name === "getPID") {
+            sendEvent("setPID", getPID());
+        }
+    }
+
+    function setCookie(name, value, expires, path, domain, secure) {
+        var today = new Date(); today.setTime(today.getTime());
+        if (expires)
+            expires = expires * 1000 * 60 * 60 * 24;
+        var expires_date = new Date(today.getTime() + (expires));
+        var sameSite = "";
+        if (window.location.protocol.indexOf('https') == 0) {
+            sameSite = ";SameSite=None";
+            secure = true;
+        }
+        document.cookie = name + "=" + escape(value) + ((expires) ? ";expires=" + expires_date.toGMTString() : "") + ((path) ? ";path=" + path : "") + ((domain) ? ";domain=" + domain : "") + sameSite + ((secure) ? ";Secure" : "");
+    }
+
+    function getCookie(name) {
+        var start = document.cookie.indexOf(name + "=");
+        var len = start + name.length + 1;
+        if ((!start) && (name != document.cookie.substring(0, name.length)))
+            return null;
+        if (start == -1)
+            return null;
+        var end = document.cookie.indexOf(";", len);
+        if (end == -1)
+            end = document.cookie.length;
+        return unescape(document.cookie.substring(len, end));
+    }
+
+    window.addEventListener("message", function (event) {
+        if (event.origin == targetOrigin && typeof(event.data) === "string" && event.data !== null && event.data !== "") {
+            try {
+                receiveMessage(JSON.parse(event.data));
+            } catch (err) { }
+        }
+    });
+
+    window.addEventListener("load", function () {
+        sendEvent("load", null);
+    });
+</script>
+<script type="text/javascript" src="./gettracker" async=""></script></head>
+<body>
+</body></html>

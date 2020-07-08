@@ -1,0 +1,26 @@
+a.ada_focus { color: #ff0000 !important; text-decoration: underline !important; font-weight: bold; padding: 2px; }
+
+body.kb-active .wrapper {margin-top: 31px;}
+
+body.kb-active *:focus, body.kb-active .ada_focus { outline: 4px solid blue; }
+
+body.kb-active select:focus, body.kb-active select.ada_focus, body.kb-active div.fs-dropdown-focus { font-size: 15px !important; padding: 4px !important;  }
+body.kb-active input:focus, body.kb-active input.ada_focus { font-size: 15px !important; padding: 4px !important; }
+body.kb-active button:focus, body.kb-active button.ada_focus { font-size: 15px !important; padding: 4px !important; }
+body.kb-active label:focus { font-size: 12px !important; padding: 4px !important; }
+
+body.kb-active .section-product .add-to-cart button.btn-cart { padding: 20px 40px !important; width: auto }
+
+body.kb-active li.ada_show .nav-dropdown { max-height: 300px; }
+
+#ada_overlay div { max-width: 800px; width: auto; }
+#ada_overlay div p { margin-top: 10px; }
+#ada_menu ul li a, #ada_menu p a, #ada_overlay div p { font-style: normal; }
+#ada_keyboard_nav { padding-top: 5px; font-size: 11pt; }
+#ada_keyboard_nav p { font-family: 'proxima_novasemibold', sans-serif; font-weight: normal}
+#ada_keyboard_nav a { color: #333; letter-spacing: normal }
+
+.nav-footer li { padding: 0 27px !important; }
+
+.landing_access_link {width: 376px; margin: 0 auto; text-align: right; color: #fff; font-family: 'Helvetica', sans-serif; }
+.landing_access_link a { text-decoration: underline; color: #fff; }

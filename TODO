@@ -1,0 +1,25 @@
+Currently doesn't work on:
+- homedepot.com [1. finds the credit card offer; 2. total price has no dot anywhere]
+- ralphlauren.com, malingoetz.com [traversing the nodes takes too long]
+- alexanderwang.com [promo code opens in a different popup]
+- hugoboss.com, rmwilliams.com [apply coupon not clickable]
+- alecsandermcqueen.com oakley.com bestbuy.com [distance between promo code and prices too big <- this could be a configuration option]
+- modcloth.com [apply button is a div with an event handler]
+- patagonia [finds subtotal when coupon field is open <- this could be a configuration option, cluster proximity]
+- brooksbrothers.com [too much space between the dollar sign and the number for prices <- visibleTexts could have a configuration option]
+- meundies.com [the apply coupon node disappears after clicking on it]
+- udemy.com [it's popping up and finding the wrong total price on the course page]s
+
+The biggest update to address is store cards. Right now large stores promote
+their store cards on the cart page and it confuses the algorithm. The improvement is
+looking for 'card' keywords and make sure they are not too close to the priceCluster.
+
+We should find out why it freezes the session on ralphlauren.com.
+
+We could add more error detection strings. Because on a bad coupon the price is the same
+it's not that big of a deal.
+
+Right now there are a number of sleep() calls in the code because waiting for pages to load or
+redirects and other things is a solved problem and beyond the scope of this project.
+
+Currency detection has to be improved, now it's naively looking for dollar sign. 

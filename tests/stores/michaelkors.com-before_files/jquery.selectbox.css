@@ -1,0 +1,170 @@
+@CHARSET "UTF-8";
+.sbHolder{
+	background-color: #ffffff;
+	border: solid 1px #d1d1d1;
+	/*font-family: 'Gotham A', 'Gotham B';
+	font-weight: normal;*/
+    font-family: 'Gotham 3r';
+    font-weight:normal;
+    font-style:normal;
+	height: 30px;
+	position: relative;
+	width: 200px;
+	text-align:left;
+	font-size: 12px;
+}
+.sbSelector{
+	margin-left:0px;
+	display: block;
+	left: 0;
+	outline: none;
+	overflow: hidden;
+	position: absolute;
+	text-indent: 15px;
+	top: 0;
+	width: 100%;
+	font-style:normal;
+	font-weight:normal;
+	text-transform:capitalize;
+	font-size:14px;
+}
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover{
+	color:#707070;
+	outline: none;
+	text-decoration: none;
+	/*padding-left:5px;*/
+}
+.sbToggle{
+	background: url(/img/dropdown_img_hp.png) -2PX 0 no-repeat;  /*<SOMA> : CSIT-254 : 24/03/2016 */
+	display: block;
+	height: 20px;
+	outline: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 30px;
+}
+
+#shippingForm .sbToggle, #billingForm .sbToggle{
+	background: url(/img/dropdown_img.png) 0 0 no-repeat;
+	height:25px;
+}
+
+body.accountpages .sbToggle{
+	background: url(/img/dropdown_img.png) 0 0 no-repeat;
+	display: block;
+	height: 30px;
+	outline: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 30px;
+
+}
+#newsletterSignup .sbToggle{
+	background: url(/img/dropdown_img.png) 0 0 no-repeat;
+	display: block;
+	height: 30px;
+	outline: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 30px;
+
+}
+.sbHolderDisabled{
+	background-color: #fff;
+	border: solid 1px #ccc;
+}
+.sbHolderDisabled .sbHolder{
+
+}
+.sbHolderDisabled .sbToggle{
+
+}
+.sbOptions{
+	border: solid 1px #ccc;
+	list-style: none;
+	left: -1px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 30px;
+	width: 200px;
+	z-index: 1;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background:#fff;
+	max-height:120px !important;
+}
+.sbOptions li{
+	/* padding: 0 7px;
+	margin-left:-7px;*/
+}
+/*<swetha> start: DEVCA-163 : 08/12/2014*/
+.sbOptions a{
+	display: block;
+	outline: none;
+	padding: 5px 0 5px 16px;
+	font-weight:normal;
+	font-size:14px;
+    line-height: 20px;
+	/*text-indent:6px;*/
+}
+/*<swetha> end: DEVCA-163 : 08/12/2014*/
+.sbOptions a:link, .sbOptions a:visited{
+	color: #707070;
+	text-decoration: none;
+}
+/*<swetha> Start: DEVCA-910 : 05/02/2015*/
+.sbOptions a:hover,
+.sbOptions a:focus,
+.sbOptions a.sbFocus{
+	background-color:#efefef !important;
+}
+/*<swetha> End: DEVCA-910 : 05/02/2015*/
+.sbOptions li.last a{
+	border-bottom: none;
+}
+.sbOptions .sbDisabled{
+	color: #707070;
+	display: block;
+	padding: 7px 0 7px 3px;
+}
+.sbOptions .sbGroup{
+	color: #767676;
+	display: block;
+	font-weight: bold;
+	padding: 7px 0 7px 3px;
+}
+.sbOptions .sbSub{
+	padding-left: 17px;
+}
+/*<swetha> start: DEVCA-163 : 08/12/2014*/
+.sbHolder ul.sbOptions li a {
+    padding-left: 16px;
+}
+/*<swetha> end: DEVCA-163 : 08/12/2014*/
+ #searchField .sbHolder {
+ 	width:133px;
+	height: 35px;
+	border:none;
+	margin: 0px;
+	float: left;
+	font-size:14px;
+ }
+  #searchField .sbOptions{
+  	width: 135px;
+  	font-size:14px;
+  }
+    #searchField .sbSelector{
+    font-size:14px;
+    text-transform: capitalize;
+    text-align:center;
+    width:100px;
+	margin-top:2px;
+
+    }
+    #searchField .sbOptions a, #searchField .sbSelector a{
+     font-size:14px;
+    }

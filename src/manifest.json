@@ -1,0 +1,43 @@
+{
+  "name": "baggy",
+  "description": "Try out coupons without integrations or selectors.",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "icons": {
+  },
+  "background": {
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "background",
+    "cookies",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "lib/jquery.js",
+        "lib/toast.js",
+        "lib/localforage.js",
+        "lib/lodash.js",
+        "lib/sbd.js",
+        "lib/similarity.js",
+        "lib/clustering.js",
+        "nearest.js",
+        "clientutils.js",
+        "baggy.js",
+        "extension-content.js"
+      ],
+      "css": [
+        "lib/toast.css"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

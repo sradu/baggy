@@ -1,0 +1,63 @@
+.wcs-en_US .wcs-open-orders .wcs-myOrder-details .wcs-order-date{
+  width: 195px !important;
+}
+
+.wcs-myOrder-details-content .wcs-two.wcs-columns.wcs-myOrder-prodTitle {
+	width: 225px;
+}
+
+.idme-btn-container{    
+	background: #ededed;
+	padding: 9px 25px;
+    width: auto;
+    display: inline-block;
+	position:relative;
+}
+.idme-btn-container:before{
+	content:'';
+	position:absolute;
+	top: -7px;
+	visibility: visible;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 7px 7px 7px;
+	border-color: transparent transparent #ededed transparent;
+	left: 146px;
+}
+.idme-btn-container > p{padding:14px 0 11px; color: #000;font-size: 13px; min-width:510px}
+.idme-btn-container > p img{margin-right:10px}
+
+.idme-btn img {
+    height: 28px !important;
+}
+
+#wcs-apply-promo-code-div-idme{position:relative;margin-top:15px}
+#idme-btn-container{position:absolute}
+.idme-btn-verification{display:inline-block !important;float:left;clear:none !important;margin-left:20px; padding-top:5px !important;}
+.idme-btn{margin-right:15px !important;}
+.wcs-apply-promo-code{position:relative}
+
+.wcs-apply-promo-code a{text-decoration:none}
+.wcs-apply-promo-code a span{text-decoration:underline;display:inline-block}
+
+.normalPromoAppliedMsg{font-size:13px;margin:10px 0}
+.normalPromoAppliedMsg i{
+	background: #000;
+    padding: 2px 7px;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+    border-radius: 14px;
+    font-size: 10px;
+    line-height: 12px;
+    position: relative;
+    top: -1px;
+    margin-right: 6px;
+    font-family: trade_gothic_lt_bold_condensed;
+}
+/***RB-16292, To override the margin-top:35 on delivery pages. Additional 10px space is added by SR div**/
+.wcs-delivery-info-detail-class #chk_summary .wcs-need-help {
+    margin-top: 25px !important;
+}
