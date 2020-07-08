@@ -31,7 +31,6 @@ This is all supported by a number of features like improved visible text detecti
 baggy is not a consumer extension, it's a proof of concept. This means it doesn't address a number of things that have been solved or are easily solvable, like:
 
 * page mutations for retailers that have inline cart pages
-* trying out multiple coupons
 * ensuring that it runs only once per session
 
 Also, while the underlying logic is fast, there are some strong sleep()s after tapping the apply coupon buttons.
